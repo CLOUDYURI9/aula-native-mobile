@@ -6,11 +6,11 @@ import { Text, View } from '@/components/Themed';
 import { blue } from 'react-native-reanimated/lib/typescript/Colors';
 
 export default function TabOneScreen() {
-  const [nome, atualizaNome] = useState('Nome');
-  const [sobrenome, atualizaSobrenome] = useState('Sobrenome');
-  const [cpf, atualizaCpf] = useState('CPF');
-  const [email, atualizaEmail] = useState('exemplo@mail.com');
-  const [telefone, atualizaTelefone] = useState('(11) 3325-5577');
+  const [nome, atualizaNome] = useState('');
+  const [sobrenome, atualizaSobrenome] = useState('');
+  const [cpf, atualizaCpf] = useState('');
+  const [email, atualizaEmail] = useState('');
+  const [telefone, atualizaTelefone] = useState('');
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Aba um</Text>
@@ -19,28 +19,34 @@ export default function TabOneScreen() {
               value={nome}
               onChangeText={atualizaNome}
               inputMode='text'
+              placeholder='Nome'
             />
             <TextInput
               value={sobrenome}
               onChangeText={atualizaSobrenome}
               inputMode='text'
+              placeholder='Sobrenome'
             />
             <TextInput
               value={cpf}
               onChangeText={atualizaCpf}
               inputMode='numeric'
+              placeholder='CPF'
             />
             <TextInput
       
               value={telefone}
               onChangeText={atualizaTelefone}
               inputMode='numeric'
+              placeholder='(11) 9961-0192'
             />
             <TextInput
         
               value={email}
               onChangeText={atualizaEmail}
               inputMode='email'
+              placeholder='nome@email.com'
+              
             />
             <Button
             title='ENVIAR'
